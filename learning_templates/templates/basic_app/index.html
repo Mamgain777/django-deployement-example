@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+<!-- {% load my_extra %} -->
+
+    {% block body_block %}
+        <h1 class="main">THIS IS HOME PAGE</h1>
+        <h1>{{ greet|title }}</h1>
+        <style>
+            .main{
+                text-align: center;
+                text-decoration: underline;
+                font-style: italic;
+            }
+        </style>
+    {% endblock %}
