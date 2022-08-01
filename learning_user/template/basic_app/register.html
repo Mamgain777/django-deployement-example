@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html"%}
+{% block title_block %}
+<title>REGISTER PAGE</title>
+{% endblock %}
+{% block body_block %}
+
+<div class="container">
+    {% if registered %}
+        <h1>THANKS FOR REGISTERING</h1>
+    {% else %}
+        <h2>USER REGISTRATION FORM</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ user_form.as_p}}
+            {{ profile_form.as_p}}
+            <input type="submit", value="REGISTER">
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

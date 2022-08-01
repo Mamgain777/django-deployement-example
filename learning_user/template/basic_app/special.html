@@ -1,0 +1,16 @@
+{% extends "basic_app/base.html" %}
+
+{% block title_block %}
+<title>SPECIAL PAGE</title>
+<style>
+    h2{
+        text-align: center;
+        /* text-decoration: underline; */
+
+    }
+</style>
+{% endblock%}
+
+{% block body_block %}
+<h2>WELCOME {{ user.first_name|upper }}</h2>
+{% endblock %}
